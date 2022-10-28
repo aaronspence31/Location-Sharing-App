@@ -1,9 +1,10 @@
 import React from "react";
+import { useState } from "react";
 
 import UsersList from "../components/UsersList";
 
 const Users = () => {
-  const USERS = [
+  const [users, setUsers] = useState([
     {
       id: "u1",
       name: "Charles Malone",
@@ -18,9 +19,9 @@ const Users = () => {
         "https://picjumbo.com/wp-content/uploads/the-golden-gate-bridge-sunset-1080x720.jpg",
       places: 5,
     },
-  ];
+  ]);
 
-  return <UsersList items={USERS} />;
+  return <UsersList items={users} />;
 };
 
 export default Users;
